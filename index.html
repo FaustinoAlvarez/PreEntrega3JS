@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/estilos.css">
+    <!-- librerias -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Manrope:wght@300&family=Sigmar&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="d-flex fixed-top">
+        <div class="container pt-3">
+            <a class="no-underline" href="/index.html"><h3 class="blanco fs-XL">TwoStreet</h3></a>
+        </div>
+        <div class="container-fluid text-center p-4 buscador">
+            <input placeholder="BUSCAR..." class="fs-4 input" name="text" type="text">
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg col">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <li class="p-header my-3 blanco mx-5 nav-item">
+                            <a href="#carrito" class="blanco fs-3 nav-link">Carrito</a>
+                        </li>
+                        <li class="my-3 blanco mx-5 nav-item">
+                            <a href="#catalogo" class="blanco fs-3 nav-link">Catalogo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="vh100">
+            <!-- titulo y subtitulo -->
+            <div>
+                <h1 class="pt-10 fs-XXL text-center fw-bold sigmar">TwoStreet</h1>
+                <p class="fs-L text-center fw-bold p-10">Este es un proyecto creado por Alvarez Bersano Ignacio Faustino como proyecto final del curso de JavaScript dictado por el profesor Omar Jesús Maniás, comision numero 39515 de CoderHouse.
+                Para el proyecto busque una pagina de ropa real en instagram, encontré una llamada OneStreet que es de mi ciudad, cambie el nombre sin mucha imaginacion y en el catalago utilice ropa que ellos tienen publicada junto con fotos sacadas de sus publicaciones. </p>
+            </div>
+            <div class="centrar">
+                <ul>
+                    <li><a href="https://www.instagram.com/onestreet_showroom/"  class="fs-M">Pagina de instagram de OneStreet</a></li>
+                    <li><a href="https://www.instagram.com/fausti.alvarez/">Mi pagina de instagram :)</a></li>
+                </ul>
+            </div>
+        </article>
+
+
+        <article class="vh100 catalogo">
+            <div id="catalogo" class="pb-6"></div>
+            <h2 class="fs-L text-center pt-4 sigmar">Catalogo</h2>
+            <section>
+                <h3 class="bruno fs-M text-center fw-bold pt-3">Bruno Street</h3>
+                <div class="centrar productosBruno">
+                            <!-- Productos Cargados en JS :) -->
+                </div>
+        </section>
+    </article>
+
+                
+        <article class="vh40">
+            <h2 id="carrito" class="fs-L text-center pt-4 sigmar">Carrito</h2>
+            <div class="carrito">
+                    <!-- Carrito -->
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="backgroundGris d-flex">
+            <div class="p-2 flex-grow-1"><p class="fs-3 my-2">Esta pagina no tiene fines de lucro ni comerciales.</p></div>
+            <div class="p-2 pe-5">
+                <a href="https://www.instagram.com/onestreet_showroom/">
+                    <img class="m-2 pe-10" src="../img/instagram.png" alt="icono instagram">
+                </a>
+            </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="tienda.js"></script>
+    <!-- JS de boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
