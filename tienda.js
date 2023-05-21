@@ -1,9 +1,9 @@
 const carroContenedor = document.querySelector(".mostrarCarrito")
 
 let catalogo = [
-    {id:"1" ,producto:"Jean Bruno", precio:6700, imagen: "./img/Bruno/pantalon jean.jpeg"},
-    {id:"2" ,producto:"Remera Bruno", precio:3900, imagen: "./img/Bruno/Remera bruno.jfif"},
-    {id:"3" ,producto:"Buzo Bruno", precio:11000, imagen: "./img/Bruno/Buzo bruno.jpeg"}
+    {id:"1" ,producto:"Jean Bruno", precio:6700, imagen: "./img/Bruno/pantalon jean.jpeg", cantidad: 1},
+    {id:"2" ,producto:"Remera Bruno", precio:3900, imagen: "./img/Bruno/Remera bruno.jfif", cantidad: 1},
+    {id:"3" ,producto:"Buzo Bruno", precio:11000, imagen: "./img/Bruno/Buzo bruno.jpeg", cantidad: 1}
 ]
 const coleccionBruno = document.querySelector(".productosBruno")
 
@@ -58,19 +58,23 @@ catalogo.forEach((producto) => {
     agregarAlCarrito(producto.id)
 })
 })
+
+
 // function to add to cart using the button
-function agregarAlCarrito(productoId){
-    // const existe = carrito.some (producto => producto.id === productoId)
-    // if (existe){
-    //     const producto = carrito.map (producto => {
-    //         if (producto.id === productoId){
-    //             producto.cantidad++
-    //         } else {
-                const prod = catalogo.find((producto) => producto.id === productoId)
-                carrito.push(prod)
-            // }
-            actualizarCarrito()
+    const agregarAlCarrito = (productoId) => {
+        const existe = carrito.some (prod => prod.id === productoId)
+        if (existe){
+            const prod = carrito.map (prod => { 
+                if (prod.id === productoId){
+                    prod.cantidad++
+                }
+            })
+        } else {
+            const item = catalogo.find((prod) => prod.id === productoId)
+            carrito.push(item)
         }
+        actualizarCarrito() 
+    }
 
 // With this function, every time we add a product, the cart will be updated and the objects in the cart will appear.
 const actualizarCarrito = () => {
@@ -89,6 +93,7 @@ const actualizarCarrito = () => {
                             <div class="heading">
                                 <div class="author"> Colección <span class="name"> Bruno (${producto.id}) </span></div>
                             </div>
+                            <h4 class="negro fs-3 pt-3">Cantidad: <span id="cantidad">${producto.cantidad}</span></h4>
                             <button class="btnEliminar" id="eliminar${producto.id}">Eliminar</button>
                         </div>
                     </div>
