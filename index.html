@@ -65,17 +65,24 @@
             <h2 class="fs-L text-center pt-4 sigmar">Catalogo</h2>
             <section>
                 <h3 class="bruno fs-M text-center fw-bold pt-3">Bruno Street</h3>
-                <div class="centrar productosBruno">
+                <div id="productosBruno" class="centrar productosBruno">
                             <!-- Productos Cargados en JS :) -->
                 </div>
         </section>
     </article>
 
                 
-        <article class="vh40">
-            <h2 id="carrito" class="fs-L text-center pt-4 sigmar">Carrito</h2>
-            <div class="carrito">
+        <article class="mvh100">
+            <div id="carrito" class="pb-6"></div>
+            <h2 class="fs-L text-center pt-4 pb-5">Carrito</h2>
+            <h4 class="text-center fs-2">Tu carrito tiene estos productos</h4>
+            <div class="mostrarCarrito centrar pt-5">
                     <!-- Carrito -->
+            </div>
+            <div>
+                <p class="fs-4 precioProducto">Total de compra: $<span id="precioTotal">0</span></p>
+                    <p class="fs-4">Total de objetos: <span id="objetosTotal">0</span></p>
+                <button id="vaciarCarrito" class="fs-3 btnEliminar">Vaciar carrito</button>
             </div>
         </article>
     </main>
